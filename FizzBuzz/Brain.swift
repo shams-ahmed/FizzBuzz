@@ -14,7 +14,7 @@ class Brain {
         case fizz
         case buzz
         case fizzbuzz
-        case number(Int)
+        case number
     }
     
     func isDivisibleByThree(number: Int) -> Bool {
@@ -37,7 +37,7 @@ class Brain {
         } else if isDivisibleByThree(number: number) {
             return .fizz
         } else {
-            return .number(number)
+            return .number
         }
     }
 }

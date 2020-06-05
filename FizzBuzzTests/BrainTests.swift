@@ -68,7 +68,7 @@ class BrainTests: XCTestCase {
     func testSayNumber() {
         let brain = Brain()
         let result = brain.check(number: 2)
-        XCTAssertEqual(result, Brain.State.number(2))
+        XCTAssertEqual(result, Brain.State.number)
     }
 
 }

@@ -21,34 +21,50 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ze3-st-Pcz">
                                         <rect key="frame" x="0.0" y="0.0" width="220" height="72"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="numberButton"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="0">
                                             <color key="titleColor" name="Text"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rW6-vY-HQO"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vdb-HJ-UUB">
                                         <rect key="frame" x="0.0" y="72" width="220" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdL-eO-Kf0">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="200"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="fizzButton"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="🍾">
                                                     <color key="titleColor" name="Text"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y8R-wk-w9L"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHS-QN-taJ">
                                                 <rect key="frame" x="80" y="0.0" width="60" height="200"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="buzzButton"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="🐝">
                                                     <color key="titleColor" name="Text"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B0J-K7-iIT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otb-uq-PFX">
                                                 <rect key="frame" x="160" y="0.0" width="60" height="200"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="fizzBuzzButton"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="🚀">
                                                     <color key="titleColor" name="Text"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sI8-S4-hZe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -86,6 +102,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buzzButton" destination="EHS-QN-taJ" id="JYs-G9-pez"/>
+                        <outlet property="fizzButton" destination="DdL-eO-Kf0" id="B25-eI-WCd"/>
+                        <outlet property="fizzBuzzButton" destination="otb-uq-PFX" id="FJN-33-faq"/>
+                        <outlet property="numberButton" destination="ze3-st-Pcz" id="cgo-pn-GcY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
