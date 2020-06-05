@@ -8,18 +8,27 @@
 
 import Foundation
 
+/// A class that controls the game
 class Game {
+    
+    /// The game score
     var score: Int
     
-    let brain: Brain
     
+    /// The brain
+    let brain: Brain
+
+    /// Creates a new game
     init() {
         score = 0
         brain = Brain()
     }
     
+    /// Takes the user's move and checks to see if it is correct
+    /// - Parameter move: the move that the user makes
+    /// - Returns: A tuple containing whether the move was correct and their score
     @discardableResult
-    func play(move: Brain.State) -> (right: Bool, score: Int) {
+    func play(move: Brain.Move) -> (right: Bool, score: Int) {
         let result = brain.check(number: score + 1)
         if result == move {
             score += 1
