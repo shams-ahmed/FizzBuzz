@@ -31,48 +31,58 @@ class GameTests: XCTestCase {
     func testIfMoveIsRight() {
         game.score = 2
         let result = game.play(move: .fizz)
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.right, true)
     }
     
     func testIfMoveIsWrong() {
         game.score = 1
         let result = game.play(move: .fizz)
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.right, false)
     }
     
     func testIfBuzzMoveRight() {
         game.score = 4
         let result = game.play(move: .buzz)
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.right, true)
     }
 
     func testIfBuzzMoveWrong() {
         game.score = 1
         let result = game.play(move: .buzz)
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.right, false)
     }
 
     func testIfFizzBuzzMoveRight() {
         game.score = 14
         let result = game.play(move: .fizzbuzz)
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.right, true)
     }
 
     func testIfFizzBuzzMoveWrong() {
         game.score = 1
         let result = game.play(move: .fizzbuzz)
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.right, false)
     }
 
     func testIfNumberMoveRight() {
         game.score = 1
         let result = game.play(move: .number(2))
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.right, true)
     }
     
     func testIfNumberMoveWrong() {
         game.score = 2
         let result = game.play(move: .number(3))
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.right, false)
+    }
+    
+    func testPlayShouldReturnIfMoveRight() {
+        let response = game.play(move: .number(1))
+        XCTAssertNotNil(response.right)
+    }
+        
+    func testPlayShouldReturnNewScore() {
+        let response = game.play(move: .number(1))
+        XCTAssertNotNil(response.score)
     }
 }
