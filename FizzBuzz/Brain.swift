@@ -8,28 +8,43 @@
 
 import Foundation
 
+/// The Brain of FizzBuzz
 class Brain {
-    
-    enum State: Equatable {
+
+    /// The different moves that the user can make
+    enum Move: Equatable {
         case fizz
         case buzz
         case fizzbuzz
         case number
     }
     
+    /// Checks to see if the number is divisible by three
+    /// - Parameter number: the number we want to check
+    /// - Returns: true if it is divisible by three
     func isDivisibleByThree(number: Int) -> Bool {
         number.isMultiple(of: 3)
     }
     
+    /// Checks to see if the number is divisible by five
+    /// - Parameter number: the number we want to check
+    /// - Returns: true if it is divisible by five
     func isDivisibleByFive(number: Int) -> Bool {
         number.isMultiple(of: 5)
     }
     
+    /// Checks to see if the number is divisible by fifteen
+    /// - Parameter number: the number we want to check
+    /// - Returns: true if it is divisible by fifteen
     func isDivisibleByFifteen(number: Int) -> Bool {
         number.isMultiple(of: 15)
     }
     
-    func check(number: Int) -> Brain.State {
+    
+    /// Checks to see what the state for the given number should be
+    /// - Parameter number: the number we are checking
+    /// - Returns: the state for the given number
+    func check(number: Int) -> Brain.Move {
         if isDivisibleByFifteen(number: number) {
             return .fizzbuzz
         } else if isDivisibleByFive(number: number) {
