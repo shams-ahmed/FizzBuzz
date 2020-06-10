@@ -10,11 +10,10 @@ import Foundation
 
 /// A class that controls the game
 class Game {
-    
+
     /// The game score
     var score: Int
-    
-    
+
     /// The brain
     let brain: Brain
 
@@ -23,7 +22,7 @@ class Game {
         score = 0
         brain = Brain()
     }
-    
+
     /// Takes the user's move and checks to see if it is correct
     /// - Parameter move: the move that the user makes
     /// - Returns: A tuple containing whether the move was correct and their score
