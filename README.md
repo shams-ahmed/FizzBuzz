@@ -7,3 +7,17 @@ A sample app that utilizes Bitrise and GitHub Actions.
 There are three workflows on Bitrise. Deploy, test and documentation.
 
 It now has SonarCloud integration. 
+
+## GitHub Actions 
+
+The following actions are triggered on a PR.
+
+- Tests
+- SwiftLint
+
+## External Actions
+
+The following are triggered on a PR.
+
+- A Bitrise workflow that runs the unit tests.
+- A SonarCloud integration that checks for code issues.
